@@ -75,6 +75,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ---- Mobile Nav Toggle ----
+  const navToggle = document.querySelector('.nav-toggle');
+  const mobileNav = document.querySelector('.mobile-nav');
+
+  if (navToggle && mobileNav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    mobileNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // ---- Nav Active State (scroll spy) ----
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = Array.from(navLinks)
+    .map(link => document.querySelector(link.getAttribute('href')))
+    .filter(Boolean);
+
+  if (sections.length) {
+    const spyObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = `#${entry.target.id}`;
+          navLinks.forEach(link => {
+            link.classList.toggle('is-current', link.getAttribute('href') === id);
+          });
+        }
+      });
+    }, {
+      rootMargin: '-45% 0px -50% 0px'
+    });
+
+    sections.forEach(section => spyObserver.observe(section));
+  }
+
   // ---- Header background on scroll ----
   const header = document.querySelector('.header');
 
