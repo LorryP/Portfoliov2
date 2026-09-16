@@ -213,22 +213,19 @@ button {
    HERO
    ============================================ */
 .hero {
-  padding-top: 8rem;
-  min-height: 90vh;
+  padding-top: 6rem;
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
 .hero-inner {
-  display: grid;
-  grid-template-columns: 6fr 6fr;
-  align-items: center;
-  gap: 3rem;
   padding-top: 2rem;
   padding-bottom: 3rem;
 }
 
 .hero-content {
+  max-width: 640px;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s var(--ease-out) 0.1s forwards;
@@ -272,52 +269,11 @@ button {
   box-shadow: 0 12px 32px rgba(225, 144, 139, 0.35);
 }
 
-/* Hero Visual */
-.hero-visual {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 0.8s var(--ease-out) 0.3s forwards;
-}
-
-.hero-visual lottie-player {
-  width: 100%;
-  max-width: 620px;
-}
-
 /* ============================================
    WORK
    ============================================ */
 .work {
   padding: 5rem 0 6rem;
-}
-
-.work-filters {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1.75rem;
-  margin-bottom: 2.5rem;
-}
-
-.filter-btn {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--ink-faint);
-  transition: color 0.3s ease;
-}
-
-.filter-btn:hover {
-  color: var(--ink);
-}
-
-.filter-btn.active {
-  color: var(--ink);
-  font-weight: 700;
 }
 
 .work-grid {
@@ -338,8 +294,22 @@ button {
   transform: translateY(0);
 }
 
-.work-card.hidden {
-  display: none;
+.work-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.65rem;
+  margin-bottom: 0.85rem;
+  border-bottom: 1px solid rgba(45, 33, 64, 0.1);
+}
+
+.work-card-tag {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink);
 }
 
 .work-card-image {
@@ -365,38 +335,11 @@ button {
   transform: scale(1.04);
 }
 
-.work-card-overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 0.5rem;
-  padding: 1.75rem;
-  background: linear-gradient(180deg, rgba(45, 33, 64, 0.85) 0%, rgba(45, 33, 64, 0) 55%);
-  opacity: 0;
-  transition: opacity 0.35s var(--ease-out);
-}
-
-.work-card:hover .work-card-overlay {
-  opacity: 1;
-}
-
-.work-card-overlay-title {
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.95rem;
-  color: var(--white);
-  line-height: 1.4;
-}
-
-.work-card-overlay-metric {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,0.85);
-}
-
 .work-card-caption {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.75rem;
   margin-top: 1rem;
 }
 
@@ -406,12 +349,16 @@ button {
   font-size: 0.95rem;
   color: var(--ink);
   line-height: 1.4;
-  margin-bottom: 0.35rem;
+  margin: 0;
 }
 
-.work-card-metric {
-  font-size: 0.85rem;
-  color: var(--ink-muted);
+.work-card-kpi {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent-dark);
+  white-space: nowrap;
 }
 
 /* ============================================
@@ -513,6 +460,41 @@ button {
 }
 
 /* ============================================
+   CONTACT
+   ============================================ */
+.contact {
+  padding: 4rem 0 6rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.contact-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-visual {
+  width: 100%;
+  max-width: 280px;
+  margin-bottom: 1rem;
+}
+
+.contact-visual lottie-player {
+  width: 100%;
+}
+
+.contact-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  max-width: 480px;
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer {
@@ -571,22 +553,17 @@ button {
    ============================================ */
 @media (max-width: 1024px) {
   .hero-inner {
-    grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .hero-content {
+    margin: 0 auto;
   }
 
   .hero-subtitle {
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .hero-visual {
-    order: -1;
-  }
-
-  .hero-visual lottie-player {
-    max-width: 380px;
   }
 
   .hero-title {
@@ -620,12 +597,6 @@ button {
 
   .work-grid {
     grid-template-columns: 1fr;
-  }
-
-  .work-filters {
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 1.25rem;
   }
 
   .nav {
