@@ -3,36 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lorry Packo — Senior Product Designer based in Paris, 8+ years crafting products that engage users and make a meaningful impact.">
   <title>Lorry Packo – Senior Product Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- Header -->
   <header class="header">
     <div class="container header-inner">
-      <a href="/" class="logo">
-        <span class="logo-dot"></span>
-        Lorry Packo
-      </a>
+      <a href="/" class="logo">Lorry Packo</a>
+
       <nav class="nav">
-        <a href="#work" class="nav-link">
-          <span class="nav-label">Work</span>
-          <span class="nav-count">06</span>
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#resume" class="nav-link">Resume</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="mailto:lorry.packo@gmail.com" class="nav-cta">
+          Let's talk
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href="#thinking" class="nav-link">
-          <span class="nav-label">Thinking</span>
-        </a>
-        <a href="#about" class="nav-link">
-          <span class="nav-label">About</span>
-        </a>
-        <a href="mailto:lorry.packo@gmail.com" class="btn-contact">
-          <span class="btn-contact-dot"></span>
-          Available for projects
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="mobile-nav" id="mobile-nav">
+        <a href="#work" class="mobile-nav-link">Work</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#resume" class="mobile-nav-link">Resume</a>
+        <a href="mailto:lorry.packo@gmail.com" class="btn-contact mobile-nav-contact">
+          Let's talk
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
         </a>
       </nav>
     </div>
@@ -42,452 +50,139 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          Senior Product Designer, Paris
-        </div>
-        <h1 class="hero-title">
-          I craft products
-          <br>that <em>engage</em> users
-          <br>& drive <em>impact</em>
-        </h1>
-        <p class="hero-subtitle">8+ years shaping digital experiences at scale. Currently designing the future of education @OpenClassrooms.</p>
-        <div class="hero-actions">
-          <a href="mailto:lorry.packo@gmail.com" class="btn-primary">
-            Let's talk
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </a>
-          <a href="#work" class="btn-secondary">View work</a>
-        </div>
+        <h1 class="hero-title">I design products that engage users and make a <span class="hero-highlight">meaningful impact<svg class="hero-highlight-mark" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <filter id="heroMarkTexture" x="-20%" y="-80%" width="140%" height="260%">
+                  <feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="2" seed="30" result="n"/>
+                  <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+                </filter>
+              </defs>
+              <path d="M3,13 L97,11" stroke-width="5" opacity="0.9" filter="url(#heroMarkTexture)"/>
+            </svg></span>.</h1>
+        <p class="hero-subtitle">10+ years of experience as a Senior Product Designer, based in Paris — currently open to new adventures and projects.</p>
+        <a href="mailto:lorry.packo@gmail.com" class="btn-primary">Let's talk</a>
       </div>
-      <div class="hero-visual">
-        <div class="hero-visual-bg"></div>
-        <div class="hero-lottie-wrap">
-          <lottie-player
-            src="assets/lf30_PLjYhs.json.json"
-            background="transparent"
-            speed="0.8"
-            loop
-            autoplay
-          ></lottie-player>
-        </div>
-        <div class="hero-floating-card">
-          <span class="floating-number">650K+</span>
-          <span class="floating-label">Students impacted</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-scroll-indicator">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
     </div>
   </section>
 
-  <!-- Selected Work -->
+  <!-- Work -->
   <section class="work" id="work">
     <div class="container">
-      <div class="section-header">
-        <div class="section-label">
-          <span class="section-number">01</span>
-          Selected Work
-        </div>
-        <div class="work-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="ios">iOS</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="android">Android</button>
-        </div>
-      </div>
-
-      <!-- Bento Grid -->
-      <div class="bento-grid">
-        <!-- Card 1 - Large -->
-        <article class="bento-card bento-large" data-category="web">
-          <div class="bento-image" style="background-color: #F5DDD9;">
+      <div class="work-block">
+      <p class="work-label">Selected work</p>
+      <div class="work-grid">
+        <a href="#" class="work-card">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/preview_oc1.png" alt="OpenClassrooms UX overhaul" loading="lazy">
           </div>
-          <div class="bento-content">
-            <div class="bento-tags">
-              <span class="tag">UX Strategy</span>
-              <span class="tag">Web App</span>
-            </div>
-            <h3 class="bento-title">Driving a strategic UX overhaul to increase completion rates</h3>
-            <div class="bento-metric">
-              <span class="metric-value">+6pts</span>
-              <span class="metric-label">path completion rate</span>
-            </div>
+          <div class="work-card-caption">
+            <p class="work-card-title">Driving a strategic UX overhaul that lifted completion rates by <span class="work-card-kpi">6 points</span> while cutting support needs</p>
+            <p class="work-card-byline">OpenClassrooms — [Year]</p>
           </div>
-          <div class="bento-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </div>
-        </article>
+        </a>
 
-        <!-- Card 2 - Medium -->
-        <article class="bento-card bento-medium" data-category="web">
-          <div class="bento-image" style="background-color: #D8EBE4;">
+        <a href="#" class="work-card">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/preview_session.png" alt="Session flow improvement" loading="lazy">
           </div>
-          <div class="bento-content">
-            <div class="bento-tags">
-              <span class="tag">Product Design</span>
-              <span class="tag">Web App</span>
-            </div>
-            <h3 class="bento-title">Improving session flow, reducing unnecessary over-time</h3>
-            <div class="bento-metric">
-              <span class="metric-value">+10pts</span>
-              <span class="metric-label">gross margin / 12 months</span>
-            </div>
+          <div class="work-card-caption">
+            <p class="work-card-title">Improving session flow, cutting unnecessary over-time by <span class="work-card-kpi">10 points</span> while maintaining quality</p>
+            <p class="work-card-byline">[Company] — [Year]</p>
           </div>
-          <div class="bento-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </div>
-        </article>
+        </a>
 
-        <!-- Card 3 - Medium -->
-        <article class="bento-card bento-medium" data-category="web">
-          <div class="bento-image" style="background-color: #EDE4F3;">
+        <a href="#" class="work-card">
+          <div class="work-card-image" style="background-color: #FCEEE6;">
             <img src="images/preview_Companion.png" alt="Companion AI assistant" loading="lazy">
           </div>
-          <div class="bento-content">
-            <div class="bento-tags">
-              <span class="tag">AI / LLM</span>
-              <span class="tag">0 to 1</span>
-            </div>
-            <h3 class="bento-title">Companion, an AI-powered learning assistant</h3>
-            <div class="bento-metric">
-              <span class="metric-value">20%</span>
-              <span class="metric-label">adoption rate</span>
-            </div>
+          <div class="work-card-caption">
+            <p class="work-card-title">Exploring and prototyping Companion, an AI-powered assistant adopted by <span class="work-card-kpi">20%</span> of pilot users</p>
+            <p class="work-card-byline">[Company] — [Year]</p>
           </div>
-          <div class="bento-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </div>
-        </article>
+        </a>
 
-        <!-- Card 4 - Large -->
-        <article class="bento-card bento-large" data-category="ios android">
-          <div class="bento-image" style="background-color: #F5DDD9;">
+        <a href="#" class="work-card">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/preview_passculture.png" alt="Pass Culture venue experience" loading="lazy">
           </div>
-          <div class="bento-content">
-            <div class="bento-tags">
-              <span class="tag">Mobile</span>
-              <span class="tag">iOS & Android</span>
-            </div>
-            <h3 class="bento-title">Redesigning venue experience to increase bookings</h3>
-            <div class="bento-metric">
-              <span class="metric-value">+15pts</span>
-              <span class="metric-label">bookings increase</span>
-            </div>
+          <div class="work-card-caption">
+            <p class="work-card-title">Redesigning the venue experience to lift bookings by <span class="work-card-kpi">15 points</span> and reduce bounce rates</p>
+            <p class="work-card-byline">Pass Culture — [Year]</p>
           </div>
-          <div class="bento-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </div>
-        </article>
+        </a>
 
-        <!-- Card 5 - Medium -->
-        <article class="bento-card bento-medium" data-category="web">
-          <div class="bento-image" style="background-color: #D8EBE4;">
+        <a href="#" class="work-card">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/Frame-9.png" alt="Adaptive placement test" loading="lazy">
           </div>
-          <div class="bento-content">
-            <div class="bento-tags">
-              <span class="tag">Growth</span>
-              <span class="tag">Web App</span>
-            </div>
-            <h3 class="bento-title">Adaptive placement test to accelerate onboarding</h3>
-            <div class="bento-metric">
-              <span class="metric-value">650K</span>
-              <span class="metric-label">students reached</span>
-            </div>
+          <div class="work-card-caption">
+            <p class="work-card-title">Introducing an adaptive placement test that reached <span class="work-card-kpi">650K</span> learners and accelerated onboarding</p>
+            <p class="work-card-byline">[Company] — [Year]</p>
           </div>
-          <div class="bento-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </div>
-        </article>
+        </a>
 
-        <!-- Card 6 - Medium -->
-        <article class="bento-card bento-medium" data-category="ios">
-          <div class="bento-image" style="background-color: #F5DDD9;">
+        <a href="#" class="work-card">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/Frame-1.png" alt="Gamified experiences" loading="lazy">
           </div>
-          <div class="bento-content">
-            <div class="bento-tags">
-              <span class="tag">Gamification</span>
-              <span class="tag">iOS</span>
-            </div>
-            <h3 class="bento-title">Gamified experiences to boost student motivation</h3>
-            <div class="bento-metric">
-              <span class="metric-value">+25%</span>
-              <span class="metric-label">weekly active students</span>
-            </div>
+          <div class="work-card-caption">
+            <p class="work-card-title">Designing gamified experiences that lifted daily practice by <span class="work-card-kpi">25%</span></p>
+            <p class="work-card-byline">[Company] — [Year]</p>
           </div>
-          <div class="bento-arrow">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </div>
-        </article>
+        </a>
+      </div>
       </div>
     </div>
   </section>
 
-  <!-- Thinking Section -->
-  <section class="thinking" id="thinking">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">
-          <span class="section-number">02</span>
-          Thinking
-        </div>
-        <p class="section-description">Lessons, frameworks and reflections from 8 years of product design.</p>
-      </div>
-
-      <div class="thinking-grid">
-        <!-- Article 1 -->
-        <a href="#" class="thinking-card">
-          <div class="thinking-card-inner">
-            <div class="thinking-meta">
-              <span class="thinking-tag">Design Leadership</span>
-              <span class="thinking-date">Mar 2025</span>
-            </div>
-            <h3 class="thinking-title">The invisible work of a staff designer: systems, alignment & saying no</h3>
-            <p class="thinking-excerpt">What changes when you stop shipping screens and start shaping how an entire product team makes design decisions.</p>
-            <div class="thinking-footer">
-              <span class="thinking-read">Read essay</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-          <div class="thinking-accent thinking-accent--1"></div>
-        </a>
-
-        <!-- Article 2 -->
-        <a href="#" class="thinking-card">
-          <div class="thinking-card-inner">
-            <div class="thinking-meta">
-              <span class="thinking-tag">AI + Education</span>
-              <span class="thinking-date">Jan 2025</span>
-            </div>
-            <h3 class="thinking-title">Designing an AI companion that teaches, not answers</h3>
-            <p class="thinking-excerpt">How we shipped Companion at OpenClassrooms - navigating the tension between helpful AI and learning that sticks.</p>
-            <div class="thinking-footer">
-              <span class="thinking-read">Read essay</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-          <div class="thinking-accent thinking-accent--2"></div>
-        </a>
-
-        <!-- Article 3 -->
-        <a href="#" class="thinking-card">
-          <div class="thinking-card-inner">
-            <div class="thinking-meta">
-              <span class="thinking-tag">Product Strategy</span>
-              <span class="thinking-date">Nov 2024</span>
-            </div>
-            <h3 class="thinking-title">From 1K to 650K users: the design decisions that scaled (and those that didn't)</h3>
-            <p class="thinking-excerpt">A retrospective on 4 years of product design at OpenClassrooms - what I'd keep, what I'd change, and why metrics alone don't tell the story.</p>
-            <div class="thinking-footer">
-              <span class="thinking-read">Read essay</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
-            </div>
-          </div>
-          <div class="thinking-accent thinking-accent--3"></div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Lab Section -->
-  <section class="lab" id="lab">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">
-          <span class="section-number">03</span>
-          Lab
-        </div>
-        <p class="section-description">Side projects, experiments and things I build for fun.</p>
-      </div>
-
-      <div class="lab-grid">
-        <!-- Lab Card 1 - Illustration -->
-        <div class="lab-card lab-card--featured">
-          <div class="lab-visual lab-visual--illustration">
-            <lottie-player
-              src="assets/lf30_PLjYhs.json.json"
-              background="transparent"
-              speed="0.6"
-              loop
-              autoplay
-              style="width: 200px; height: 200px;"
-            ></lottie-player>
-          </div>
-          <div class="lab-info">
-            <div class="lab-status lab-status--active">
-              <span class="lab-status-dot"></span>
-              Ongoing
-            </div>
-            <h3 class="lab-title">Scientific Illustration</h3>
-            <p class="lab-description">Naturalist illustrations blending botany, wildlife and watercolor techniques. A personal practice exploring the beauty of living things.</p>
-            <div class="lab-tech">
-              <span>Procreate</span>
-              <span>Watercolor</span>
-              <span>Ink</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Lab Card 2 - Design System -->
-        <a href="#" class="lab-card">
-          <div class="lab-visual lab-visual--ds">
-            <div class="lab-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-            </div>
-          </div>
-          <div class="lab-info">
-            <div class="lab-status lab-status--shipped">
-              <span class="lab-status-dot"></span>
-              Shipped
-            </div>
-            <h3 class="lab-title">OC Design System</h3>
-            <p class="lab-description">Built the foundational design system at OpenClassrooms from scratch. 120+ components, used by 8 designers and 30+ developers.</p>
-            <div class="lab-tech">
-              <span>Figma</span>
-              <span>React</span>
-              <span>Storybook</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Lab Card 3 - AI Experiment -->
-        <a href="#" class="lab-card">
-          <div class="lab-visual lab-visual--ai">
-            <div class="lab-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8 6a4 4 0 0 1 8 0"/><path d="M12 18v4"/><path d="M8 22h8"/><circle cx="12" cy="14" r="4"/><path d="M17 14h3"/><path d="M4 14h3"/></svg>
-            </div>
-          </div>
-          <div class="lab-info">
-            <div class="lab-status lab-status--experiment">
-              <span class="lab-status-dot"></span>
-              Experiment
-            </div>
-            <h3 class="lab-title">Design + Claude</h3>
-            <p class="lab-description">Exploring how AI agents can augment the design process. From automated user research synthesis to generative prototyping.</p>
-            <div class="lab-tech">
-              <span>Claude API</span>
-              <span>MCP</span>
-              <span>Figma</span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Lab Card 4 - Portfolio -->
-        <a href="#" class="lab-card">
-          <div class="lab-visual lab-visual--code">
-            <div class="lab-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14" y1="4" x2="10" y2="20"/></svg>
-            </div>
-          </div>
-          <div class="lab-info">
-            <div class="lab-status lab-status--active">
-              <span class="lab-status-dot"></span>
-              Ongoing
-            </div>
-            <h3 class="lab-title">This Portfolio</h3>
-            <p class="lab-description">Hand-coded from scratch. No templates, no CMS. HTML, CSS, vanilla JS, and a deer.</p>
-            <div class="lab-tech">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Lottie</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
+  <!-- About -->
   <section class="about" id="about">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-label">
-          <span class="section-number">04</span>
-          About
-        </div>
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2 class="about-headline">Hi! I'm Lorry!</h2>
+        <p class="about-bio">
+          I'm a Senior Product Designer with <strong>10+ years of experience</strong> crafting products that captivate users and create lasting value. Specializing in learning experiences and interaction design, I blend <strong>research</strong>, strategy, and visual storytelling to build <strong>intuitive and engaging</strong> digital products. I thrive in collaborative environments, working closely with <strong>cross-functional teams</strong> to turn complex challenges into seamless experiences.
+        </p>
+        <a href="https://www.linkedin.com/in/lorrypacko/" target="_blank" rel="noopener" class="about-link">
+          Discover my linkedin
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
-
-      <div class="about-layout">
-        <div class="about-intro">
-          <h2 class="about-headline">I design foundational product experiences — the kind that shape how teams build and how users <em>grow</em>.</h2>
-        </div>
-
-        <div class="about-content">
-          <div class="about-block">
-            <p>For the past 8 years, I've been working at the intersection of education and technology — mostly at <strong>OpenClassrooms</strong>, where I joined early and helped scale the product from a small platform to a learning experience reaching <strong>650K+ students</strong>.</p>
-            <p>Along the way, I designed AI-powered learning tools, led strategic UX overhauls, built a design system from scratch, and worked closely with product and engineering to ship things that actually moved the metrics — and the people behind them.</p>
-            <p>I also spent time at <strong>Pass Culture</strong>, redesigning the venue experience for one of France's most ambitious cultural apps.</p>
-          </div>
-
-          <div class="about-block">
-            <p>Outside of product, I practice <strong>scientific illustration</strong> — naturalist drawings of wildlife, botany, and the beauty of living things. It keeps my eye sharp, my hand patient, and reminds me that the best design decisions are often the most invisible ones.</p>
-            <p>I'm based in Paris, curious about everything, and currently open to <strong>founding designer</strong> or <strong>staff-level roles</strong> where I can shape both the product and the culture around it.</p>
-          </div>
-
-          <div class="about-links">
-            <a href="https://www.linkedin.com/in/lorrypacko/" target="_blank" rel="noopener" class="about-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-              LinkedIn
-            </a>
-            <a href="https://dribbble.com/lorrypacko" target="_blank" rel="noopener" class="about-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.81zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702A10.58 10.58 0 0012 1.764c-.825 0-1.63.1-2.4.288zm10.335 3.483c-.218.29-1.91 2.478-5.678 4.03.242.49.477.99.7 1.49.075.17.15.34.22.51 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.382-6.36z"/></svg>
-              Dribbble
-            </a>
-            <a href="mailto:lorry.packo@gmail.com" class="about-link about-link--email">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-              lorry.packo@gmail.com
-            </a>
-          </div>
+      <div class="about-photo">
+        <div class="about-photo-frame">
+          <img src="images/portrait.png" alt="Lorry Packo portrait">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-card">
-        <div class="cta-content">
-          <p class="cta-eyebrow">Let's collaborate</p>
-          <h2 class="cta-title">Have a project in mind?<br>Let's shape it <em>together</em>.</h2>
-          <a href="mailto:lorry.packo@gmail.com" class="btn-primary btn-primary--large">
-            Get in touch
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-          </a>
-        </div>
-        <div class="cta-decoration">
-          <div class="cta-circle cta-circle--1"></div>
-          <div class="cta-circle cta-circle--2"></div>
-        </div>
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-visual">
+        <lottie-player
+          src="assets/lf30_PLjYhs.json.json"
+          background="transparent"
+          speed="0.8"
+          loop
+          autoplay
+        ></lottie-player>
       </div>
+      <h2 class="contact-title">Let's build something people stick with.</h2>
+      <a href="mailto:lorry.packo@gmail.com" class="btn-primary">Let's talk</a>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-left">
-        <span class="footer-name">Lorry Packo</span>
-        <span class="footer-role">Senior Product Designer</span>
-      </div>
-      <div class="footer-center">
-        <span class="footer-copy">&copy; 2025 &mdash; Designed with care</span>
-      </div>
+      <span class="footer-name">Lorry Packo</span>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/lorrypacko/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.64334 11.0341H0.310005V3.54076H2.64334V11.0341ZM1.41334 2.60409H1.39667C1.218 2.61742 1.0385 2.59366 0.869449 2.53432C0.700393 2.47498 0.545429 2.38134 0.414282 2.25927C0.283134 2.1372 0.178635 1.98934 0.107344 1.82497C0.036053 1.66059 -0.000491084 1.48326 4.98345e-06 1.30409C4.98345e-06 0.564092 0.563338 0.00409261 1.43 0.00409261C1.60953 -0.0101492 1.79005 0.0128711 1.96025 0.0717087C2.13046 0.130546 2.28666 0.223931 2.41906 0.346001C2.55146 0.468071 2.6572 0.616192 2.72963 0.781066C2.80207 0.94594 2.83965 1.12401 2.84 1.30409C2.84 2.03076 2.29 2.60409 1.41334 2.60409ZM12 11.0341H9.33333V7.15742C9.33333 6.15742 8.92 5.45076 8 5.45076C7.71925 5.45073 7.44565 5.53934 7.2182 5.70393C6.99076 5.86853 6.82107 6.10073 6.73334 6.36742C6.67759 6.56563 6.65839 6.77234 6.67667 6.97742V11.0341H4.07C4.07 11.0341 4.10334 4.16742 4.07 3.54409H6.69667V4.73076C6.85334 4.21742 7.69667 3.48409 9.03 3.48409C10.6967 3.48409 12 4.56076 12 6.88076V11.0341Z" fill="currentColor"/></svg>
         </a>
         <a href="https://dribbble.com/lorrypacko" target="_blank" rel="noopener" aria-label="Dribbble" class="social-link">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 24C5.385 24 0 18.615 0 12S5.385 0 12 0s12 5.385 12 12-5.385 12-12 12zm10.12-10.358c-.35-.11-3.17-.953-6.384-.438 1.34 3.684 1.887 6.684 1.992 7.308 2.3-1.555 3.936-4.02 4.395-6.87zm-6.115 7.808c-.153-.9-.75-4.032-2.19-7.77l-.066.02c-5.79 2.015-7.86 6.025-8.04 6.4 1.73 1.358 3.92 2.166 6.29 2.166 1.42 0 2.77-.29 4-.81zm-11.62-2.58c.232-.4 3.045-5.055 8.332-6.765.135-.045.27-.084.405-.12-.26-.585-.54-1.167-.832-1.74C7.17 11.775 2.206 11.71 1.756 11.7l-.004.312c0 2.633.998 5.037 2.634 6.855zm-2.42-8.955c.46.008 4.683.026 9.477-1.248-1.698-3.018-3.53-5.558-3.8-5.928-2.868 1.35-5.01 3.99-5.676 7.17zM9.6 2.052c.282.38 2.145 2.914 3.822 6 3.645-1.365 5.19-3.44 5.373-3.702A10.58 10.58 0 0012 1.764c-.825 0-1.63.1-2.4.288zm10.335 3.483c-.218.29-1.91 2.478-5.678 4.03.242.49.477.99.7 1.49.075.17.15.34.22.51 3.41-.43 6.8.26 7.14.33-.02-2.42-.88-4.64-2.382-6.36z"/></svg>
-          Dribbble
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.8346 5.98972C14.6384 5.03052 14.2562 4.11902 13.7097 3.30668C13.4398 2.90924 13.1329 2.53818 12.7931 2.19847C11.7584 1.15809 10.4395 0.446454 9.00188 0.152858C7.54679 -0.145512 6.03587 -0.00505094 4.66072 0.556432C3.28557 1.11792 2.10813 2.07513 1.27773 3.30668C1.00753 3.70819 0.777295 4.13517 0.590301 4.58154C0.200717 5.50447 0 6.4961 0 7.49789C0 8.49967 0.200717 9.49131 0.590301 10.4142C0.778622 10.8608 1.01026 11.2878 1.28189 11.6891C1.96766 12.7066 2.89263 13.5403 3.97566 14.117C5.05869 14.6938 6.26669 14.996 7.49371 14.9971C9.48135 14.9964 11.3874 14.2067 12.7931 12.8015C13.1328 12.4617 13.4397 12.0906 13.7097 11.6933C14.2674 10.8653 14.6541 9.93433 14.8473 8.95493C15.0405 7.97553 15.0361 6.96742 14.8346 5.98972ZM13.893 7.4354C12.4262 7.14088 10.9231 7.07065 9.43517 7.22708L9.29768 6.89796C9.16436 6.58549 9.02271 6.27302 8.88106 5.96889C11.4058 4.93567 12.4348 3.46916 12.4432 3.43583C13.3702 4.56365 13.882 5.97551 13.893 7.4354ZM11.7224 2.69008C11.7224 2.71508 10.7934 4.10243 8.38945 5.01066C7.679 3.70758 6.87999 2.45478 5.99804 1.26107C6.99767 1.01765 8.04131 1.01932 9.04015 1.26595C10.039 1.51258 10.9635 1.99686 11.7349 2.67758L11.7224 2.69008ZM4.76484 1.69436C5.62731 2.8878 6.42021 4.13 7.13959 5.41478C5.21442 5.91592 3.23371 6.17208 1.2444 6.1772C1.44756 5.21138 1.87094 4.3055 2.48157 3.53012C3.09219 2.75473 3.87357 2.13078 4.76484 1.70686V1.69436ZM1.09441 7.49789C1.09441 7.43123 1.09441 7.36457 1.09441 7.29791C3.31657 7.30592 5.52864 6.99873 7.66453 6.38551C7.84784 6.74381 8.02282 7.11043 8.1853 7.47289L7.93117 7.54788C4.48154 8.66443 2.73173 11.7724 2.73173 11.7724C1.67624 10.599 1.09292 9.07616 1.09441 7.49789ZM7.49371 13.9014C6.00458 13.904 4.56153 13.3851 3.41499 12.4348L3.56081 12.5473C3.56081 12.5473 4.78568 9.86846 8.58109 8.54777H8.62276C9.23233 10.1157 9.6913 11.7382 9.99344 13.3931C9.20299 13.7293 8.3527 13.9022 7.49371 13.9014ZM11.0683 12.8098C10.7832 11.2493 10.3651 9.71613 9.81846 8.22698C11.1519 8.02845 12.5127 8.12372 13.8055 8.50611C13.6685 9.37272 13.3548 10.2019 12.8839 10.9422C12.413 11.6826 11.7951 12.3182 11.0683 12.8098Z" fill="currentColor"/></svg>
         </a>
       </div>
     </div>
