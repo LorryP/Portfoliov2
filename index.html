@@ -50,7 +50,15 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-content">
-        <h1 class="hero-title">I design products that engage users and make a meaningful impact.</h1>
+        <h1 class="hero-title">I design products that engage users and make a <span class="hero-highlight">meaningful impact<svg class="hero-highlight-mark" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <filter id="heroMarkTexture" x="-20%" y="-80%" width="140%" height="260%">
+                  <feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="2" seed="30" result="n"/>
+                  <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+                </filter>
+              </defs>
+              <path d="M3,13 L97,11" stroke-width="5" opacity="0.9" filter="url(#heroMarkTexture)"/>
+            </svg></span>.</h1>
         <p class="hero-subtitle">10+ years of experience as a Senior Product Designer, based in Paris — currently open to new adventures and projects.</p>
         <a href="mailto:lorry.packo@gmail.com" class="btn-primary">Let's talk</a>
       </div>
@@ -60,9 +68,11 @@
   <!-- Work -->
   <section class="work" id="work">
     <div class="container">
+      <div class="work-block">
+      <p class="work-label">Selected work</p>
       <div class="work-grid">
         <a href="#" class="work-card">
-          <div class="work-card-image" style="background-color: #F9F8F9;">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/preview_oc1.png" alt="OpenClassrooms UX overhaul" loading="lazy">
           </div>
           <div class="work-card-caption">
@@ -72,7 +82,7 @@
         </a>
 
         <a href="#" class="work-card">
-          <div class="work-card-image" style="background-color: #F9F8F9;">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/preview_session.png" alt="Session flow improvement" loading="lazy">
           </div>
           <div class="work-card-caption">
@@ -92,7 +102,7 @@
         </a>
 
         <a href="#" class="work-card">
-          <div class="work-card-image" style="background-color: #F9F8F9;">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/preview_passculture.png" alt="Pass Culture venue experience" loading="lazy">
           </div>
           <div class="work-card-caption">
@@ -102,7 +112,7 @@
         </a>
 
         <a href="#" class="work-card">
-          <div class="work-card-image" style="background-color: #F9F8F9;">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/Frame-9.png" alt="Adaptive placement test" loading="lazy">
           </div>
           <div class="work-card-caption">
@@ -112,7 +122,7 @@
         </a>
 
         <a href="#" class="work-card">
-          <div class="work-card-image" style="background-color: #F9F8F9;">
+          <div class="work-card-image" style="background-color: #FFFFFF;">
             <img src="images/Frame-1.png" alt="Gamified experiences" loading="lazy">
           </div>
           <div class="work-card-caption">
@@ -120,6 +130,7 @@
             <p class="work-card-byline">[Company] — [Year]</p>
           </div>
         </a>
+      </div>
       </div>
     </div>
   </section>
