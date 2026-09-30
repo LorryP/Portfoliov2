@@ -24,23 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   cards.forEach(card => revealObserver.observe(card));
 
-  // ---- Scroll Reveal for About Section ----
-  const aboutInner = document.querySelector('.about-inner');
-  if (aboutInner) {
-    const aboutObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          aboutObserver.unobserve(entry.target);
-        }
-      });
-    }, {
-      threshold: 0.08,
-      rootMargin: '0px 0px -60px 0px'
-    });
-    aboutObserver.observe(aboutInner);
-  }
-
   // ---- Smooth Scroll for Anchor Links ----
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', (e) => {
@@ -95,6 +78,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     sections.forEach(section => spyObserver.observe(section));
   }
+
+  // ---- Random tilt on focus-area pills ----
+  document.querySelectorAll('.work-tags li').forEach(tag => {
+    const tilt = () => {
+      const angle = 2 + Math.random() * 4; // between 2 and 6 degrees
+      const direction = Math.random() < 0.5 ? -1 : 1;
+      tag.style.setProperty('--tilt', `${(angle * direction).toFixed(1)}deg`);
+    };
+    tag.addEventListener('mouseenter', tilt);
+    tag.addEventListener('focus', tilt);
+  });
 
   // ---- Header background on scroll ----
   const header = document.querySelector('.header');
