@@ -327,11 +327,17 @@ button {
 }
 
 .work-block {
-  background-color: #F7F5F6;
-  background-image: radial-gradient(circle, rgba(45, 33, 64, 0.07) 1px, transparent 1px);
-  background-size: 18px 18px;
-  border-radius: 28px;
-  padding: 2rem 2rem 2.5rem;
+  border-top: 1px solid rgba(45, 33, 64, 0.14);
+  padding-top: 1.75rem;
+}
+
+.work-head {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.6rem;
 }
 
 .work-label {
@@ -341,7 +347,74 @@ button {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-muted);
-  margin-bottom: 1.4rem;
+}
+
+.work-focus {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+}
+
+.work-focus-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #5F566E;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+}
+
+.work-tags li {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink);
+  padding: 0.45rem 0.8rem;
+  border: 1px solid rgba(45, 33, 64, 0.2);
+  border-radius: var(--radius-full);
+  position: relative;
+  cursor: help;
+  outline: none;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.work-tags li:hover,
+.work-tags li:focus-visible {
+  transform: rotate(var(--tilt, -3deg));
+}
+
+/* Tooltip shown on hover / keyboard focus / tap */
+.work-tags li::after {
+  content: attr(data-tip);
+  position: absolute;
+  top: calc(100% + 0.6rem);
+  left: 0;
+  z-index: 10;
+  width: max-content;
+  max-width: 280px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--white);
+  background: var(--ink);
+  padding: 0.6rem 0.8rem;
+  border-radius: var(--radius-md);
+  opacity: 0;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.2s var(--ease-out), transform 0.2s var(--ease-out);
+}
+
+/* Counter-rotate so the tooltip stays straight while the pill tilts */
+.work-tags li:hover::after,
+.work-tags li:focus::after {
+  opacity: 1;
+  transform: translateY(0) rotate(calc(var(--tilt, -3deg) * -1));
 }
 
 .work-grid {
@@ -366,8 +439,7 @@ button {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
-  border-top-left-radius: var(--radius-md);
-  border-top-right-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -413,104 +485,6 @@ button {
   font-size: 0.78rem;
   color: var(--ink-muted);
   margin: 0;
-}
-
-/* ============================================
-   ABOUT
-   ============================================ */
-.about {
-  padding: 4rem 0 6rem;
-  border-top: 1px solid rgba(0,0,0,0.06);
-}
-
-.about-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
-}
-
-.about-inner.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.about-headline {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 2rem;
-  color: var(--ink);
-  margin-bottom: 1.5rem;
-}
-
-.about-bio {
-  font-size: 0.95rem;
-  color: var(--ink);
-  line-height: 1.75;
-  margin-bottom: 2rem;
-  max-width: 480px;
-}
-
-.about-bio strong {
-  font-weight: 700;
-}
-
-.about-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--ink);
-  padding: 0.75rem 1.4rem;
-  border: 1px solid rgba(0,0,0,0.15);
-  border-radius: var(--radius-full);
-  transition: all 0.3s var(--ease-out);
-}
-
-.about-link:hover {
-  border-color: var(--ink);
-  transform: translateX(3px);
-}
-
-.about-photo {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.about-photo-frame {
-  position: relative;
-  width: 100%;
-  max-width: 340px;
-  aspect-ratio: 4 / 5;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.about-photo-frame::before {
-  content: '';
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  right: -1rem;
-  bottom: -1rem;
-  background: var(--accent);
-  border-radius: var(--radius-lg);
-  z-index: 0;
-}
-
-.about-photo-frame img {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
 }
 
 /* ============================================
@@ -609,21 +583,6 @@ button {
   .work-grid {
     grid-template-columns: 1fr 1fr;
   }
-
-  .about-inner {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    text-align: center;
-  }
-
-  .about-bio {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .about-photo {
-    order: -1;
-  }
 }
 
 @media (max-width: 768px) {
@@ -655,9 +614,25 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .work-block {
-    border-radius: 20px;
-    padding: 1.5rem 1.25rem 2rem;
+  /* Anchor tooltips to the whole list so they never run off-screen */
+  .work-tags {
+    position: relative;
+  }
+
+  .work-tags li,
+  .work-tags li:hover,
+  .work-tags li:focus-visible {
+    position: static;
+    transform: none;
+  }
+
+  .work-tags li::after {
+    max-width: 100%;
+  }
+
+  .work-tags li:hover::after,
+  .work-tags li:focus::after {
+    transform: none;
   }
 
   .nav {
