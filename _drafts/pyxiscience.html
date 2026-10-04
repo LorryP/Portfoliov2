@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Case study — Merging three assessment creation paths into one, and designing AI grading where teachers always have the final say.">
   <title>PyxiScience – Lorry Packo</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/case-study.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/case-study.css">
 </head>
 <body>
 
@@ -19,16 +21,19 @@
     section by section. Sections you don't need can be deleted as a whole block.
     - <span class="cs-todo">…</span> marks copy that still needs to be written.
     - <div class="cs-placeholder">…</div> marks an image to add: replace the whole div
-      with <img src="images/your-file.webp" alt="Short description">.
+      with <img src="../images/your-file.webp" alt="Short description">.
   -->
 
   <!-- Header -->
   <header class="header">
+    <div class="header-blur header-blur--no-veil" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
     <div class="container header-inner">
-      <a href="index.html" class="logo">Lorry Packo</a>
+      <a href="../index.html" class="logo">Lorry Packo</a>
 
       <nav class="nav">
-        <a href="index.html#work" class="nav-link">Work</a>
+        <a href="../index.html#work" class="nav-link">Work</a>
       </nav>
 
       <div class="header-actions">
@@ -39,11 +44,7 @@
       </div>
 
       <nav class="mobile-nav" id="mobile-nav">
-        <a href="index.html#work" class="mobile-nav-link">Work</a>
-        <a href="mailto:lorry.packo@gmail.com" class="btn-contact mobile-nav-contact">
-          Let's talk
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-        </a>
+        <a href="../index.html#work" class="mobile-nav-link">Work</a>
       </nav>
     </div>
   </header>
@@ -54,7 +55,7 @@
       <!-- Hero — the three colours below set the banner for this case study -->
       <header class="cs-hero" style="--cs-hero: #E8F1FC; --cs-glow-1: #A8CFFF; --cs-glow-2: #FCDCA4;">
       <div class="container cs-hero-inner">
-        <a href="index.html#work" class="cs-back"><span aria-hidden="true">←</span> All work</a>
+        <a href="../index.html#work" class="cs-back"><span aria-hidden="true">←</span> All work</a>
         <p class="cs-eyebrow">PyxiScience · Assessments</p>
         <h1 class="cs-title">One flow to create an assessment, and AI grading where the teacher keeps the final say</h1>
         <ul class="cs-meta">
@@ -312,8 +313,7 @@
 
       <!-- Bottom navigation -->
       <nav class="cs-next" aria-label="Case study navigation">
-        <a href="index.html#work" class="cs-next-link"><span aria-hidden="true">←</span> All work</a>
-        <a href="mailto:lorry.packo@gmail.com" class="btn-primary">Let's talk</a>
+        <a href="../index.html#work" class="cs-next-link"><span aria-hidden="true">←</span> All work</a>
       </nav>
 
       </div>
@@ -335,6 +335,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
