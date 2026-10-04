@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---- Nav Active State (scroll spy) ----
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
   const sections = Array.from(navLinks)
     .map(link => document.querySelector(link.getAttribute('href')))
     .filter(Boolean);
@@ -89,14 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
     tag.addEventListener('mouseenter', tilt);
     tag.addEventListener('focus', tilt);
   });
-
-  // ---- Header background on scroll ----
-  const header = document.querySelector('.header');
-
-  window.addEventListener('scroll', () => {
-    header.style.borderBottomColor = window.scrollY > 50
-      ? 'rgba(0,0,0,0.08)'
-      : 'rgba(0,0,0,0.04)';
-  }, { passive: true });
 
 });

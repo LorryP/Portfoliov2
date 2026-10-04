@@ -89,26 +89,32 @@
 .cs-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 0.25rem 0;
   list-style: none;
   margin-bottom: 3rem;
+  font-size: 1rem;
+  letter-spacing: -0.012em;
+  color: var(--cs-soft);
 }
 
 .cs-meta li {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  line-height: 1;
-  padding: 0.5rem 0.85rem;
-  background: rgba(255, 255, 255, 0.55);
-  border: 1px solid rgba(45, 33, 64, 0.16);
-  border-radius: var(--radius-full);
 }
 
-.cs-meta-status::before {
+/* Plain text separated by a middle dot */
+.cs-meta li + li::before {
+  content: '·';
+  order: -2;
+  margin: 0 0.6rem;
+  opacity: 0.6;
+}
+
+.cs-meta-status::after {
   content: '';
+  order: -1;
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -116,7 +122,9 @@
 }
 
 /* ---- Figures & image placeholders ---- */
-.cs-figure img {
+.cs-figure img,
+.cs-figure video {
+  display: block;
   width: 100%;
   border-radius: 20px;
 }
@@ -383,6 +391,24 @@
   margin-bottom: 0.4rem;
 }
 
+/* Persona photo at the top of a method card */
+.cs-persona-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.cs-persona-trait {
+  font-size: 0.85rem;
+  color: var(--cs-soft);
+}
+
+.cs-persona-trait + p {
+  margin-bottom: 0.75rem;
+}
+
 .cs-method p {
   font-size: 0.95rem;
   color: var(--cs-text);
@@ -553,7 +579,7 @@
 @media (max-width: 768px) {
   .cs-hero {
     --cs-overlap: 4rem;
-    padding-top: 6rem;
+    padding-top: 7rem;
   }
 
   .cs-section,
