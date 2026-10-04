@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Lorry Packo — Senior Product Designer based in Paris, 8+ years crafting products that engage users and make a meaningful impact.">
   <title>Lorry Packo – Senior Product Designer</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Familjen+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,26 +17,14 @@
 
   <!-- Header -->
   <header class="header">
+    <div class="header-blur" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
     <div class="container header-inner">
       <a href="/" class="logo">Lorry Packo</a>
 
-      <nav class="nav">
+      <nav class="nav nav--always">
         <a href="#work" class="nav-link">Work</a>
-      </nav>
-
-      <div class="header-actions">
-        <a href="mailto:lorry.packo@gmail.com" class="nav-cta">Contact</a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-
-      <nav class="mobile-nav" id="mobile-nav">
-        <a href="#work" class="mobile-nav-link">Work</a>
-        <a href="mailto:lorry.packo@gmail.com" class="btn-contact mobile-nav-contact">
-          Let's talk
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
-        </a>
       </nav>
     </div>
   </header>
@@ -44,17 +34,15 @@
     <div class="container hero-inner">
       <div class="hero-main">
         <div class="hero-content">
-          <h1 class="hero-title">Hi, I'm Lorry. <span class="hero-title-soft">I design the moments that make people</span> <span class="hero-title-keep"><span class="hero-highlight">stay<svg class="hero-highlight-mark" viewBox="0 0 100 26" preserveAspectRatio="none" aria-hidden="true">
-              <defs>
-                <filter id="heroMarkTexture" x="-20%" y="-80%" width="140%" height="260%">
-                  <feTurbulence type="fractalNoise" baseFrequency="1.3" numOctaves="2" seed="30" result="n"/>
-                  <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
-                </filter>
-              </defs>
-              <path d="M3,13 L97,11" stroke-width="5" opacity="0.9" filter="url(#heroMarkTexture)"/>
-            </svg></span><span class="hero-title-soft">,</span></span><span class="hero-title-soft"> from onboarding to everyday&nbsp;use.</span></h1>
-          <p class="hero-subtitle">Senior &amp; Founding Product Designer · 10 years of experience</p>
-          <p class="hero-status"><span class="hero-status-dot" aria-hidden="true"></span>Available for freelance &amp; long-term roles</p>
+          <h1 class="hero-title">Hi, <strong>I'm Lorry</strong>. <span class="hero-title-soft">I design the moments that make people stay, from onboarding to everyday&nbsp;use.</span></h1>
+          <div class="hero-meta">
+            <p class="hero-subtitle">Senior &amp; Founding Product Designer · 10 years of experience</p>
+            <p class="hero-status">
+              Currently
+              <span class="pill"><img src="images/icon-sparkles.svg" width="16" height="16" alt="" aria-hidden="true">looking for my next adventures</span>
+              , ex-Openclassrooms, ex-Lalilo
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -67,7 +55,7 @@
       <div class="work-head">
         <p class="work-label">Selected work</p>
         <div class="work-focus">
-          <p class="work-focus-label">Picked from what I do best:</p>
+          <p class="work-focus-label">Picked from what I do best :</p>
           <ul class="work-tags">
             <li tabindex="0" data-tip="I start from the first win: what should someone achieve in their first five minutes?">Onboarding</li>
             <li tabindex="0" data-tip="I look for the real reason to come back, not the notification that nags.">Retention</li>
@@ -78,63 +66,76 @@
         </div>
       </div>
       <div class="work-grid">
-        <a href="#" class="work-card">
+        <!-- PyxiScience: set aside for now. The case study lives in _drafts/pyxiscience.html.
+             To bring it back, uncomment this card (and add images/preview_pyxiscience.webp).
+        <a href="pyxiscience.html" class="work-card">
+          <div class="work-card-image" style="background-color: #E8F1FC;">
+          </div>
+          <div class="work-card-caption">
+            <p class="work-card-title">Merging <span class="work-card-kpi">3</span> assessment creation flows into one, and designing AI grading where teachers keep the final say</p>
+            <p class="work-card-byline">PyxiScience — 2025–2026</p>
+            <p class="work-card-byline">AI feature, 0 → 1</p>
+          </div>
+        </a>
+        -->
+
+        <a href="wip.html" class="work-card"><!-- Companion case study set aside in _drafts/companion.html -->
+          <div class="work-card-image" style="background-color: #F3F1F3;">
+            <img src="images/preview_Companion.webp" alt="Companion AI assistant" loading="lazy">
+          </div>
+          <div class="work-card-caption">
+            <p class="work-card-title">Exploring and prototyping Companion, an AI-powered assistant adopted by <span class="work-card-kpi">20%</span> of pilot users</p>
+            <p class="work-card-byline">OpenClassrooms — 2024–2025</p>
+          </div>
+        </a>
+
+        <a href="wip.html" class="work-card">
           <div class="work-card-image" style="background-color: #F3F1F3;">
             <img src="images/preview_oc1.png" alt="OpenClassrooms UX overhaul" loading="lazy">
           </div>
           <div class="work-card-caption">
             <p class="work-card-title">Driving a strategic UX overhaul that lifted completion rates by <span class="work-card-kpi">6 points</span> while cutting support needs</p>
-            <p class="work-card-byline">OpenClassrooms — [Year]</p>
+            <p class="work-card-byline">OpenClassrooms — 2024</p>
           </div>
         </a>
 
-        <a href="#" class="work-card">
+        <a href="wip.html" class="work-card">
           <div class="work-card-image" style="background-color: #F3F1F3;">
             <img src="images/preview_session.png" alt="Session flow improvement" loading="lazy">
           </div>
           <div class="work-card-caption">
             <p class="work-card-title">Improving session flow, cutting unnecessary over-time by <span class="work-card-kpi">10 points</span> while maintaining quality</p>
-            <p class="work-card-byline">[Company] — [Year]</p>
+            <p class="work-card-byline">OpenClassrooms — 2023–2025</p>
           </div>
         </a>
 
-        <a href="#" class="work-card">
-          <div class="work-card-image" style="background-color: #FCEEE6;">
-            <img src="images/preview_Companion.png" alt="Companion AI assistant" loading="lazy">
-          </div>
-          <div class="work-card-caption">
-            <p class="work-card-title">Exploring and prototyping Companion, an AI-powered assistant adopted by <span class="work-card-kpi">20%</span> of pilot users</p>
-            <p class="work-card-byline">[Company] — [Year]</p>
-          </div>
-        </a>
-
-        <a href="#" class="work-card">
+        <a href="passculture.html" class="work-card">
           <div class="work-card-image" style="background-color: #F3F1F3;">
             <img src="images/preview_passculture.png" alt="Pass Culture venue experience" loading="lazy">
           </div>
           <div class="work-card-caption">
             <p class="work-card-title">Redesigning the venue experience to lift bookings by <span class="work-card-kpi">15 points</span> and reduce bounce rates</p>
-            <p class="work-card-byline">Pass Culture — [Year]</p>
+            <p class="work-card-byline">Pass Culture — 2021</p>
           </div>
         </a>
 
-        <a href="#" class="work-card">
+        <a href="placementtest.html" class="work-card">
           <div class="work-card-image" style="background-color: #F3F1F3;">
             <img src="images/Frame-9.png" alt="Adaptive placement test" loading="lazy">
           </div>
           <div class="work-card-caption">
             <p class="work-card-title">Introducing an adaptive placement test that reached <span class="work-card-kpi">650K</span> learners and accelerated onboarding</p>
-            <p class="work-card-byline">[Company] — [Year]</p>
+            <p class="work-card-byline">Lalilo — 2019</p>
           </div>
         </a>
 
-        <a href="#" class="work-card">
+        <a href="gamification.html" class="work-card">
           <div class="work-card-image" style="background-color: #F3F1F3;">
             <img src="images/Frame-1.png" alt="Gamified experiences" loading="lazy">
           </div>
           <div class="work-card-caption">
             <p class="work-card-title">Designing gamified experiences that lifted daily practice by <span class="work-card-kpi">25%</span></p>
-            <p class="work-card-byline">[Company] — [Year]</p>
+            <p class="work-card-byline">Lalilo — 2017–2020</p>
           </div>
         </a>
       </div>
@@ -154,23 +155,14 @@
           autoplay
         ></lottie-player>
       </div>
-      <h2 class="contact-title">Let's build something people stick with.</h2>
-      <a href="mailto:lorry.packo@gmail.com" class="btn-primary">Let's talk</a>
+      <h2 class="contact-title">Let’s build something people stick with.</h2>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span class="footer-name">Lorry Packo</span>
-      <div class="footer-social">
-        <a href="https://www.linkedin.com/in/lorrypacko/" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link">
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.64334 11.0341H0.310005V3.54076H2.64334V11.0341ZM1.41334 2.60409H1.39667C1.218 2.61742 1.0385 2.59366 0.869449 2.53432C0.700393 2.47498 0.545429 2.38134 0.414282 2.25927C0.283134 2.1372 0.178635 1.98934 0.107344 1.82497C0.036053 1.66059 -0.000491084 1.48326 4.98345e-06 1.30409C4.98345e-06 0.564092 0.563338 0.00409261 1.43 0.00409261C1.60953 -0.0101492 1.79005 0.0128711 1.96025 0.0717087C2.13046 0.130546 2.28666 0.223931 2.41906 0.346001C2.55146 0.468071 2.6572 0.616192 2.72963 0.781066C2.80207 0.94594 2.83965 1.12401 2.84 1.30409C2.84 2.03076 2.29 2.60409 1.41334 2.60409ZM12 11.0341H9.33333V7.15742C9.33333 6.15742 8.92 5.45076 8 5.45076C7.71925 5.45073 7.44565 5.53934 7.2182 5.70393C6.99076 5.86853 6.82107 6.10073 6.73334 6.36742C6.67759 6.56563 6.65839 6.77234 6.67667 6.97742V11.0341H4.07C4.07 11.0341 4.10334 4.16742 4.07 3.54409H6.69667V4.73076C6.85334 4.21742 7.69667 3.48409 9.03 3.48409C10.6967 3.48409 12 4.56076 12 6.88076V11.0341Z" fill="currentColor"/></svg>
-        </a>
-        <a href="https://dribbble.com/lorrypacko" target="_blank" rel="noopener" aria-label="Dribbble" class="social-link">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M14.8346 5.98972C14.6384 5.03052 14.2562 4.11902 13.7097 3.30668C13.4398 2.90924 13.1329 2.53818 12.7931 2.19847C11.7584 1.15809 10.4395 0.446454 9.00188 0.152858C7.54679 -0.145512 6.03587 -0.00505094 4.66072 0.556432C3.28557 1.11792 2.10813 2.07513 1.27773 3.30668C1.00753 3.70819 0.777295 4.13517 0.590301 4.58154C0.200717 5.50447 0 6.4961 0 7.49789C0 8.49967 0.200717 9.49131 0.590301 10.4142C0.778622 10.8608 1.01026 11.2878 1.28189 11.6891C1.96766 12.7066 2.89263 13.5403 3.97566 14.117C5.05869 14.6938 6.26669 14.996 7.49371 14.9971C9.48135 14.9964 11.3874 14.2067 12.7931 12.8015C13.1328 12.4617 13.4397 12.0906 13.7097 11.6933C14.2674 10.8653 14.6541 9.93433 14.8473 8.95493C15.0405 7.97553 15.0361 6.96742 14.8346 5.98972ZM13.893 7.4354C12.4262 7.14088 10.9231 7.07065 9.43517 7.22708L9.29768 6.89796C9.16436 6.58549 9.02271 6.27302 8.88106 5.96889C11.4058 4.93567 12.4348 3.46916 12.4432 3.43583C13.3702 4.56365 13.882 5.97551 13.893 7.4354ZM11.7224 2.69008C11.7224 2.71508 10.7934 4.10243 8.38945 5.01066C7.679 3.70758 6.87999 2.45478 5.99804 1.26107C6.99767 1.01765 8.04131 1.01932 9.04015 1.26595C10.039 1.51258 10.9635 1.99686 11.7349 2.67758L11.7224 2.69008ZM4.76484 1.69436C5.62731 2.8878 6.42021 4.13 7.13959 5.41478C5.21442 5.91592 3.23371 6.17208 1.2444 6.1772C1.44756 5.21138 1.87094 4.3055 2.48157 3.53012C3.09219 2.75473 3.87357 2.13078 4.76484 1.70686V1.69436ZM1.09441 7.49789C1.09441 7.43123 1.09441 7.36457 1.09441 7.29791C3.31657 7.30592 5.52864 6.99873 7.66453 6.38551C7.84784 6.74381 8.02282 7.11043 8.1853 7.47289L7.93117 7.54788C4.48154 8.66443 2.73173 11.7724 2.73173 11.7724C1.67624 10.599 1.09292 9.07616 1.09441 7.49789ZM7.49371 13.9014C6.00458 13.904 4.56153 13.3851 3.41499 12.4348L3.56081 12.5473C3.56081 12.5473 4.78568 9.86846 8.58109 8.54777H8.62276C9.23233 10.1157 9.6913 11.7382 9.99344 13.3931C9.20299 13.7293 8.3527 13.9022 7.49371 13.9014ZM11.0683 12.8098C10.7832 11.2493 10.3651 9.71613 9.81846 8.22698C11.1519 8.02845 12.5127 8.12372 13.8055 8.50611C13.6685 9.37272 13.3548 10.2019 12.8839 10.9422C12.413 11.6826 11.7951 12.3182 11.0683 12.8098Z" fill="currentColor"/></svg>
-        </a>
-      </div>
+  <footer class="footer footer--simple">
+    <div class="container">
+      <p class="footer-credit">Designed by human with Figma - Integrated &amp; build with Claude Code</p>
     </div>
   </footer>
 

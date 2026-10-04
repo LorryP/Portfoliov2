@@ -1,0 +1,597 @@
+/* ============================================
+   CASE STUDY TEMPLATE
+   Shared by every case study page.
+   Loaded after style.css (uses its tokens).
+   ============================================ */
+:root {
+  --cs-text: #4A4159;
+  --cs-soft: #5F566E;
+  --cs-line: rgba(45, 33, 64, 0.14);
+  --cs-surface: #F7F5F8;
+  --cs-rail: 200px;
+}
+
+/* ---- Hero (full-width coloured banner, colours set per page) ---- */
+.cs-hero {
+  --cs-overlap: 9rem;
+  padding-top: 7.5rem;
+  margin-bottom: var(--cs-overlap);
+  position: relative;
+  background:
+    radial-gradient(60% 85% at 88% 0%, var(--cs-glow-1, #CFC3F8) 0%, transparent 70%),
+    radial-gradient(55% 75% at 0% 100%, var(--cs-glow-2, #F8D9D3) 0%, transparent 70%),
+    var(--cs-hero, #EFEBFB);
+}
+
+/* Grain texture over the banner */
+.cs-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 220px 220px;
+  mix-blend-mode: multiply;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.cs-hero-inner {
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s var(--ease-out) 0.1s forwards;
+}
+
+/* The hero visual straddles the bottom edge of the banner */
+.cs-hero .cs-figure {
+  margin-bottom: calc(var(--cs-overlap) * -1);
+}
+
+.cs-hero .cs-figure > * {
+  box-shadow: 0 30px 60px -30px rgba(45, 33, 64, 0.3);
+}
+
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--cs-soft);
+  margin-bottom: 2.5rem;
+  transition: color 0.25s var(--ease-out);
+}
+
+.cs-back:hover {
+  color: var(--ink);
+}
+
+.cs-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cs-soft);
+  margin-bottom: 1rem;
+}
+
+.cs-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.3rem, 4.6vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+  max-width: 17ch;
+  margin-bottom: 1.75rem;
+}
+
+.cs-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0;
+  list-style: none;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  letter-spacing: -0.012em;
+  color: var(--cs-soft);
+}
+
+.cs-meta li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* Plain text separated by a middle dot */
+.cs-meta li + li::before {
+  content: '·';
+  order: -2;
+  margin: 0 0.6rem;
+  opacity: 0.6;
+}
+
+.cs-meta-status::after {
+  content: '';
+  order: -1;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4A9B5F;
+}
+
+/* ---- Figures & image placeholders ---- */
+.cs-figure img,
+.cs-figure video {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.cs-figure figcaption {
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+  margin-top: 0.75rem;
+}
+
+/* Replace a placeholder with <img src="images/..." alt="..."> once the visual is ready */
+.cs-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  aspect-ratio: 16 / 9;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--cs-soft);
+  background: #F6ECEA;
+  border: 1.5px dashed rgba(196, 115, 110, 0.55);
+  border-radius: 20px;
+}
+
+.cs-placeholder--4x3 {
+  aspect-ratio: 4 / 3;
+}
+
+.cs-placeholder-tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.cs-placeholder-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+.cs-placeholder-desc {
+  font-size: 0.875rem;
+  line-height: 1.45;
+  max-width: 44ch;
+}
+
+/* Marks copy that still needs to be written */
+.cs-todo {
+  background: rgba(225, 144, 139, 0.18);
+  border-bottom: 1px dashed var(--accent-dark);
+  border-radius: 3px;
+  padding: 0 0.2em;
+}
+
+/* ---- Summary (overview, details, problem / solution / result) ---- */
+.cs-summary {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 1.5rem;
+  padding: 4rem 0 0;
+}
+
+.cs-summary-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cs-card {
+  background: var(--cs-surface);
+  border-radius: 20px;
+  padding: 2rem;
+}
+
+.cs-card-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.9rem;
+}
+
+.cs-card p {
+  color: var(--cs-text);
+  line-height: 1.6;
+}
+
+.cs-overview {
+  font-size: 1.1rem;
+}
+
+.cs-details {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.cs-details dt {
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+}
+
+.cs-details dd {
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.cs-psr {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cs-psr-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.45rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.6rem;
+}
+
+/* ---- Impact ---- */
+.cs-impact {
+  padding: 4.5rem 0 5rem;
+}
+
+.cs-impact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.cs-stat {
+  border-top: 2px solid var(--ink);
+  padding-top: 1.25rem;
+}
+
+.cs-stat-value {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.6rem, 4.4vw, 3.75rem);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  margin-bottom: 0.9rem;
+}
+
+.cs-stat-value span {
+  color: var(--accent-dark);
+}
+
+.cs-stat-text {
+  color: var(--cs-text);
+  line-height: 1.5;
+  max-width: 32ch;
+}
+
+/* ---- Long-form sections: label rail + content ---- */
+.cs-section {
+  display: grid;
+  grid-template-columns: var(--cs-rail) minmax(0, 1fr);
+  gap: 2rem;
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--cs-line);
+}
+
+.cs-label {
+  position: sticky;
+  top: 6.5rem;
+  align-self: start;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.cs-lead {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  max-width: 42ch;
+  margin-bottom: 1.5rem;
+}
+
+.cs-body {
+  max-width: 680px;
+}
+
+.cs-body p {
+  font-size: 1.075rem;
+  color: var(--cs-text);
+  line-height: 1.65;
+}
+
+.cs-body p + p {
+  margin-top: 1rem;
+}
+
+.cs-section .cs-figure {
+  margin-top: 2.5rem;
+}
+
+/* Numbered list (goals, recommendations) */
+.cs-list {
+  list-style: none;
+  counter-reset: cs;
+  max-width: 760px;
+}
+
+.cs-list li {
+  counter-increment: cs;
+  display: grid;
+  grid-template-columns: 2.75rem 1fr;
+  font-size: 1.075rem;
+  color: var(--cs-text);
+  line-height: 1.5;
+  padding: 1.1rem 0;
+  border-top: 1px solid var(--cs-line);
+}
+
+.cs-list li:last-child {
+  border-bottom: 1px solid var(--cs-line);
+}
+
+.cs-list li::before {
+  content: counter(cs, decimal-leading-zero);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-dark);
+  padding-top: 0.2rem;
+}
+
+.cs-body + .cs-list {
+  margin-top: 2rem;
+}
+
+/* Method cards (process) */
+.cs-methods {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.cs-method {
+  background: var(--cs-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.cs-method-name {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+/* Persona photo at the top of a method card */
+.cs-persona-photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.cs-persona-trait {
+  font-size: 0.85rem;
+  color: var(--cs-soft);
+}
+
+.cs-persona-trait + p {
+  margin-bottom: 0.75rem;
+}
+
+.cs-method p {
+  font-size: 0.95rem;
+  color: var(--cs-text);
+  line-height: 1.5;
+}
+
+.cs-note {
+  font-size: 0.95rem;
+  color: var(--cs-soft);
+  border-left: 2px solid var(--accent);
+  padding-left: 1rem;
+  margin-top: 2rem;
+  max-width: 680px;
+}
+
+/* Insights */
+.cs-insight {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.cs-insight + .cs-insight {
+  margin-top: 4rem;
+}
+
+.cs-insight:nth-child(even) .cs-insight-text {
+  order: 2;
+}
+
+.cs-insight-num {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--accent-dark);
+  margin-bottom: 0.6rem;
+}
+
+.cs-insight-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.9rem;
+}
+
+.cs-insight-text p {
+  color: var(--cs-text);
+  line-height: 1.65;
+}
+
+/* ---- Design showcases (full width) ---- */
+.cs-design {
+  padding: 4.5rem 0;
+  border-top: 1px solid var(--cs-line);
+}
+
+.cs-design-head {
+  display: grid;
+  grid-template-columns: var(--cs-rail) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2.5rem;
+}
+
+.cs-design-head .cs-label {
+  position: static;
+}
+
+.cs-design-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.cs-design-head p {
+  color: var(--cs-text);
+  line-height: 1.65;
+}
+
+/* ---- Reflections ---- */
+.cs-reflections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.cs-reflection {
+  background: var(--cs-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+}
+
+.cs-reflection-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.7rem;
+}
+
+.cs-reflection p {
+  color: var(--cs-text);
+  line-height: 1.6;
+}
+
+/* ---- Bottom navigation ---- */
+.cs-next {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 3.5rem 0 5rem;
+  border-top: 1px solid var(--cs-line);
+}
+
+.cs-next-link {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  letter-spacing: -0.02em;
+  transition: color 0.25s var(--ease-out);
+}
+
+.cs-next-link:hover {
+  color: var(--accent-dark);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .cs-summary,
+  .cs-section,
+  .cs-design-head,
+  .cs-insight {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-section,
+  .cs-design-head {
+    gap: 1.25rem;
+  }
+
+  .cs-label {
+    position: static;
+  }
+
+  .cs-insight {
+    gap: 1.5rem;
+  }
+
+  .cs-insight:nth-child(even) .cs-insight-text {
+    order: 0;
+  }
+
+  .cs-impact-grid,
+  .cs-methods,
+  .cs-reflections {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs-hero {
+    --cs-overlap: 4rem;
+    padding-top: 7rem;
+  }
+
+  .cs-section,
+  .cs-design {
+    padding: 3rem 0;
+  }
+
+  .cs-card {
+    padding: 1.5rem;
+  }
+
+  .cs-placeholder {
+    aspect-ratio: 4 / 3;
+  }
+}
