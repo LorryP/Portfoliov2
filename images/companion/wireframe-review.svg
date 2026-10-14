@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="440" viewBox="0 0 360 440" fill="none" font-family="Familjen Grotesk, -apple-system, Helvetica Neue, Arial, sans-serif">
+  <rect width="360" height="440" rx="16" fill="#F3F1F3"/>
+  <rect x="30" y="28" width="300" height="384" rx="12" fill="#fff" stroke="#E2DFE5"/>
+  <text x="48" y="58" font-size="13" font-weight="600" fill="#2D2140">Companion</text>
+  <circle cx="304" cy="53" r="2" fill="#B5B0BA"/><circle cx="310" cy="53" r="2" fill="#B5B0BA"/><circle cx="316" cy="53" r="2" fill="#B5B0BA"/>
+  <line x1="30" y1="74" x2="330" y2="74" stroke="#E2DFE5"/>
+  <rect x="146" y="90" width="166" height="44" rx="10" fill="#F3F1F3"/>
+  <rect x="158" y="101" width="18" height="22" rx="3" fill="#fff" stroke="#B5B0BA"/>
+  <text x="186" y="110" font-size="12" font-weight="600" fill="#2D2140">my-deliverable.pdf</text>
+  <rect x="186" y="117" width="60" height="6" rx="3" fill="#D9D5DE"/>
+  <circle cx="58" cy="160" r="10" fill="#E2DFE5"/>
+  <text x="76" y="165" font-size="12.5" fill="#2D2140">Checked against the project criteria:</text>
+  <circle cx="88" cy="196" r="9" fill="#E3EFE6"/><path d="M84 196 L87 199 L92 193" stroke="#4E8A5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="106" y="192" width="170" height="8" rx="4" fill="#D9D5DE"/>
+  <circle cx="88" cy="226" r="9" fill="#E3EFE6"/><path d="M84 226 L87 229 L92 223" stroke="#4E8A5E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="106" y="222" width="140" height="8" rx="4" fill="#D9D5DE"/>
+  <circle cx="88" cy="256" r="9" fill="#FBE9E7"/><text x="85.5" y="260.5" font-size="12" font-weight="700" fill="#C4736E">!</text>
+  <rect x="106" y="252" width="184" height="8" rx="4" fill="#D9D5DE"/>
+  <rect x="106" y="266" width="120" height="8" rx="4" fill="#D9D5DE"/>
+  <rect x="76" y="292" width="236" height="34" rx="17" fill="#fff" stroke="#E1908B" stroke-width="1.5"/>
+  <text x="94" y="313" font-size="12.5" fill="#2D2140">How do I fix the missing criterion?</text>
+  <line x1="30" y1="356" x2="330" y2="356" stroke="#E2DFE5"/>
+  <text x="48" y="388" font-size="12.5" fill="#A39DA8">Ask about your project…</text>
+  <path d="M302 377 L316 384 L302 391 L305 384 Z" fill="#C9C4CE"/>
+</svg>
