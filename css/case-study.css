@@ -9,6 +9,8 @@
   --cs-line: rgba(45, 33, 64, 0.14);
   --cs-surface: #F7F5F8;
   --cs-rail: 200px;
+  /* Corner radius for images, cards and panels in case studies */
+  --cs-radius: 8px;
 }
 
 /* ---- Hero (full-width coloured banner, colours set per page) ---- */
@@ -47,8 +49,11 @@
   margin-bottom: calc(var(--cs-overlap) * -1);
 }
 
+/* Square bottom edge, shadow on the top and sides only (clipped at the bottom) */
 .cs-hero .cs-figure > * {
-  box-shadow: 0 30px 60px -30px rgba(45, 33, 64, 0.3);
+  border-radius: 16px 16px 0 0;
+  box-shadow: 0 0 40px -10px rgba(45, 33, 64, 0.25);
+  clip-path: inset(-60px -60px 0 -60px);
 }
 
 .cs-back {
@@ -86,6 +91,17 @@
   margin-bottom: 1.75rem;
 }
 
+/* Outcome line under the title: echoes the homepage card's promise */
+.cs-subtitle {
+  font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+  line-height: 1.45;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+  max-width: 48ch;
+  margin-top: -0.5rem;
+  margin-bottom: 1.75rem;
+}
+
 .cs-meta {
   display: flex;
   flex-wrap: wrap;
@@ -112,21 +128,12 @@
   opacity: 0.6;
 }
 
-.cs-meta-status::after {
-  content: '';
-  order: -1;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #4A9B5F;
-}
-
 /* ---- Figures & image placeholders ---- */
 .cs-figure img,
 .cs-figure video {
   display: block;
   width: 100%;
-  border-radius: 20px;
+  border-radius: var(--cs-radius);
 }
 
 .cs-figure figcaption {
@@ -148,7 +155,7 @@
   color: var(--cs-soft);
   background: #F6ECEA;
   border: 1.5px dashed rgba(196, 115, 110, 0.55);
-  border-radius: 20px;
+  border-radius: var(--cs-radius);
 }
 
 .cs-placeholder--4x3 {
@@ -199,7 +206,7 @@
 
 .cs-card {
   background: var(--cs-surface);
-  border-radius: 20px;
+  border-radius: var(--cs-radius);
   padding: 2rem;
 }
 
@@ -382,7 +389,7 @@
 
 .cs-method {
   background: var(--cs-surface);
-  border-radius: var(--radius-lg);
+  border-radius: var(--cs-radius);
   padding: 1.5rem;
 }
 
@@ -502,7 +509,7 @@
 
 .cs-reflection {
   background: var(--cs-surface);
-  border-radius: var(--radius-lg);
+  border-radius: var(--cs-radius);
   padding: 1.75rem;
 }
 
@@ -618,7 +625,7 @@
 .cs-wireframe img {
   display: block;
   width: 100%;
-  border-radius: var(--radius-lg);
+  border-radius: var(--cs-radius);
   margin-bottom: 1rem;
 }
 
