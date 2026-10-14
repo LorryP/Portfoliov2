@@ -595,3 +595,41 @@
     aspect-ratio: 4 / 3;
   }
 }
+
+/* Charts from research reports, shown on a white card */
+.cs-insight .cs-figure {
+  margin-top: 0;
+}
+
+.cs-chart img {
+  background: #fff;
+  padding: 1.25rem;
+  box-sizing: border-box;
+}
+
+/* Wireframes: three low-fi explorations side by side */
+.cs-wireframes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.cs-wireframe img {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  margin-bottom: 1rem;
+}
+
+.cs-wireframe p {
+  color: var(--cs-text);
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .cs-wireframes {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+  }
+}
