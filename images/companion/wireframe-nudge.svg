@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="440" viewBox="0 0 360 440" fill="none" font-family="Familjen Grotesk, -apple-system, Helvetica Neue, Arial, sans-serif">
+  <rect width="360" height="440" rx="16" fill="#F3F1F3"/>
+  <rect x="30" y="28" width="300" height="384" rx="12" fill="#fff" stroke="#E2DFE5"/>
+  <rect x="30" y="28" width="300" height="30" rx="12" fill="#F8F7F9"/>
+  <line x1="30" y1="58" x2="330" y2="58" stroke="#E2DFE5"/>
+  <line x1="104" y1="58" x2="104" y2="412" stroke="#E2DFE5"/>
+  <rect x="42" y="76" width="50" height="7" rx="3.5" fill="#D9D5DE"/>
+  <rect x="42" y="94" width="42" height="7" rx="3.5" fill="#D9D5DE"/>
+  <rect x="38" y="108" width="60" height="18" rx="5" fill="#F3F1F3"/>
+  <rect x="42" y="113" width="46" height="7" rx="3.5" fill="#B5B0BA"/>
+  <rect x="42" y="134" width="40" height="7" rx="3.5" fill="#D9D5DE"/>
+  <text x="120" y="84" font-size="10" font-weight="600" fill="#8A8391" letter-spacing="0.6">STEP 3 OF 5</text>
+  <text x="120" y="102" font-size="13" font-weight="600" fill="#2D2140">Build the database</text>
+  <rect x="120" y="116" width="190" height="7" rx="3.5" fill="#E2DFE5"/>
+  <rect x="120" y="129" width="170" height="7" rx="3.5" fill="#E2DFE5"/>
+  <rect x="120" y="142" width="180" height="7" rx="3.5" fill="#E2DFE5"/>
+  <rect x="120" y="164" width="190" height="60" rx="8" fill="#F3F1F3"/>
+  <rect x="120" y="238" width="160" height="7" rx="3.5" fill="#E2DFE5"/>
+  <rect x="120" y="251" width="186" height="7" rx="3.5" fill="#E2DFE5"/>
+  <rect x="122" y="276" width="176" height="96" rx="12" fill="#fff" filter="url(#s)"/>
+  <rect x="122" y="276" width="176" height="96" rx="12" fill="#fff" stroke="#E2DFE5"/>
+  <text x="136" y="298" font-size="11.5" fill="#2D2140">Many learners get stuck on</text>
+  <text x="136" y="313" font-size="11.5" fill="#2D2140">this step. Want a quick</text>
+  <text x="136" y="328" font-size="11.5" fill="#2D2140">walkthrough?</text>
+  <rect x="136" y="340" width="70" height="22" rx="11" fill="#E1908B"/>
+  <text x="151" y="355" font-size="11" font-weight="600" fill="#fff">Show me</text>
+  <text x="220" y="355" font-size="11" fill="#8A8391">Later</text>
+  <circle cx="306" cy="390" r="15" fill="#fff" stroke="#E1908B" stroke-width="1.5"/>
+  <circle cx="306" cy="390" r="5" fill="#E1908B"/>
+  <defs><filter id="s" x="100" y="260" width="220" height="140" filterUnits="userSpaceOnUse"><feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#2D2140" flood-opacity="0.12"/></filter></defs>
+</svg>
