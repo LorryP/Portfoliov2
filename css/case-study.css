@@ -136,6 +136,35 @@
   border-radius: var(--cs-radius);
 }
 
+.cs-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.cs-steps img:first-child {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 768px) {
+  .cs-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cs-figure + .cs-figure {
+  margin-top: 2.5rem;
+}
+
+.cs-status {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cs-soft);
+}
+
 .cs-figure figcaption {
   font-size: 0.85rem;
   color: var(--ink-muted);
@@ -606,6 +635,13 @@
 /* Charts from research reports, shown on a white card */
 .cs-insight .cs-figure {
   margin-top: 0;
+}
+
+.cs-chart svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--cs-radius);
 }
 
 .cs-chart img {
