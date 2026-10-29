@@ -300,6 +300,10 @@
   margin-top: 1.5rem;
 }
 
+.cs-impact-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
 .cs-stat {
   border-top: 2px solid var(--ink);
   padding-top: 1.25rem;
